@@ -5,7 +5,7 @@ ruby '2.6.3'
 gem 'devise'
 gem 'devise-jwt', '~> 0.5.9'
 
-gem 'kaminari' 
+gem 'kaminari'
 gem 'api-pagination'
 gem 'active_model_serializers'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -39,7 +39,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'faker'
-
 end
 
 group :development do
