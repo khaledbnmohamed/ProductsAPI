@@ -5,7 +5,9 @@ ruby '2.6.3'
 gem 'devise'
 gem 'devise-jwt', '~> 0.5.9'
 
-
+gem 'kaminari' 
+gem 'api-pagination'
+gem 'active_model_serializers'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
 # Use sqlite3 as the database for Active Record
@@ -31,12 +33,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 gem 'rubocop', '~> 0.76.0', require: false
-gem 'faker'
 gem 'rubocop-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'faker'
+
 end
 
 group :development do

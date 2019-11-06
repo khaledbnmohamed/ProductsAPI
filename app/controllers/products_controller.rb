@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
         all_products = Product.all
         return send_error(:not_found) if all_products.blank?
   
-        render json: all_products.compact.map(&:array_to_json)
+        paginate json: all_products.compact.map(&:array_to_json) , per_page: 10
     end
 
     def show
