@@ -13,7 +13,7 @@ namespace :db do
         email: Faker::Internet.email(name: :name)
       )
     end
-    20.times do
+    150.times do
       Product.create!(
         price: rand(1..545_645_46),
         title: Faker::Dessert.variety
