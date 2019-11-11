@@ -12,8 +12,10 @@ class ProductsController < ApplicationController
     end
 
     def show
-        product = Product.find(params[:id])
-        render json: { product: product.array_to_json }
+        @product = Product.find(params[:id])
+        if stale?(last_modified: @product.updated_at)
+            render json: { product: @product.array_to_json }
+        end
     end
 
     def authorize_admin
