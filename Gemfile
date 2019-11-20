@@ -16,6 +16,8 @@ gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 3.11'
 gem 'mini_magick', '~> 4.8'
 gem 'dotenv-rails', groups: [:development, :test]
+gem "pundit", '~> 2.1.0'
+
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
@@ -34,7 +36,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors'
 gem 'rubocop', '~> 0.76.0', require: false
 gem 'rubocop-rails'
-gem 'rack-cache', :require => 'rack/cache'
+gem 'rack-cache'
 gem 'dalli'
 
 group :development, :test do

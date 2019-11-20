@@ -4,4 +4,5 @@ class Product < ApplicationRecord
   def array_to_json
       { product_id: id, product_name: title }
     end
+
 end
