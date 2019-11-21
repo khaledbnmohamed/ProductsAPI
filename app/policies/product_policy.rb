@@ -2,7 +2,6 @@ class ProductPolicy < ApplicationPolicy
     attr_reader :user
 
     def index?
-      
       @user.admin?
     end
   
