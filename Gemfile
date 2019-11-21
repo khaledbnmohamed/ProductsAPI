@@ -15,7 +15,6 @@ gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 gem 'mini_magick', '~> 4.8'
-gem 'dotenv-rails', groups: [:development, :test]
 gem "pundit", '~> 2.1.0'
 
 
@@ -39,10 +38,23 @@ gem 'rubocop-rails'
 gem 'rack-cache'
 gem 'dalli'
 
+
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'faker'
+  gem 'rspec-rails', '~> 3.8.3'
+  gem 'spring-commands-rspec' #https://medium.com/new-story?inResponseToQuoteId=43df65fd123b
+  gem "factory_bot_rails"
+  gem 'capybara'
+  gem 'guard-rspec', require: false #guard-rspec : It allows to automatically & intelligently
+                                    # launch specs when files are modified. 
+  gem 'database_cleaner'
+  gem 'dotenv-rails'
+
+end
+
+group :test do 
+  gem 'shoulda-matchers', require: false
 end
 
 group :development do
