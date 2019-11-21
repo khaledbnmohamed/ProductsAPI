@@ -19,6 +19,9 @@
 
 FactoryBot.define do
   factory :user do
-    
+        sequence(:email) { |i| "rspec_user#{i}@example.com" }
+        password {"123456789"}
+        admin {false}
+
   end
 end

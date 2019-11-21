@@ -21,14 +21,18 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   context 'validation tests' do
+    let(:user) { FactoryBot.create(:user) }
+
     it 'ensure first name presence' do
-    user = User.new(name: 'Lola', email: 'koko@email.com', admin: true).save
-    expect(user).to eq(false)
+      user.save
+      expect(user).to eq(true)
     end
+
     it 'ensure email presence' do
       user = User.new(name: 'Lola', email: 'khaled@hotmail.com').save
       expect(user).to eq(true)
     end
+
   end
   context 'scope tests' do
 
