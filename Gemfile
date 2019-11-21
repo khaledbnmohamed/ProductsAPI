@@ -50,11 +50,14 @@ group :development, :test do
                                     # launch specs when files are modified. 
   gem 'database_cleaner'
   gem 'dotenv-rails'
+  gem 'annotate'
+
 
 end
 
 group :test do 
   gem 'shoulda-matchers', require: false
+  gem 'simplecov', require: false
 end
 
 group :development do

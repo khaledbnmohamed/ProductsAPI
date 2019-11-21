@@ -10,8 +10,7 @@
 #  updated_at :datetime         not null
 #
 
-FactoryBot.define do
-  factory :product do
-    
-  end
+require 'rails_helper'
+
+RSpec.describe Product, type: :model do
 end
