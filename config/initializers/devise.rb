@@ -102,9 +102,7 @@ Devise.setup do |config|
   # won't boot properly.
   # config.reload_routes = true
   config.jwt do |jwt|
-    jwt.secret = '02e485a79cb5b0135804df7ed5a
-    e4353b5526a47ea545f7e2b4746f3443c2b196745aac52a7aa4c3987a02117817bf7fe72
-    a9af04a291d63910515926a0b00af'
+    jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
     jwt.dispatch_requests = [
       ['POST', %r{^/login$}]
     ]

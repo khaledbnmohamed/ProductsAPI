@@ -5,6 +5,6 @@ private
       render json: resource
   end
   def respond_to_on_destroy
-        head :ok
+        head :no_content
   end
 end
