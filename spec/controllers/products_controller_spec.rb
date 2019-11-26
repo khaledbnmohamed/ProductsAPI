@@ -6,9 +6,9 @@ RSpec.describe ProductsController, type: :controller do
     end
 
   context 'GET /products' do
-      it 'redirects to login if no login ' do
+      it 'unauthorized if no login ' do
           get :index
-          expect(response).to redirect_to('/login')
+          expect(response.status).to eq(401)
       end
   end
 
@@ -20,8 +20,6 @@ RSpec.describe ProductsController, type: :controller do
 
       it 'unauthorized user ' do
           get :index
-          puts('=================================================')
-          puts(response.body)
           expect(response.status).to eq(401)
       end
     end
@@ -34,8 +32,6 @@ RSpec.describe ProductsController, type: :controller do
 
       it 'should return json products' do
         get :index
-        puts('=================================================')
-        puts(response.body)
         expect(response.status).to eq(200)
       end
     end

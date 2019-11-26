@@ -23,6 +23,8 @@ RSpec.describe User, type: :model do
   context 'validation tests' do
     let(:user) { FactoryBot.create(:user) }
 
+    it { should validate_presence_of(:email) }
+
     it 'ensure basic info presence' do
       expect(user.save).to eq(true)
     end

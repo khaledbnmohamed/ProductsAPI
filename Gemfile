@@ -48,7 +48,6 @@ group :development, :test do
   gem 'capybara'
   gem 'guard-rspec', require: false #guard-rspec : It allows to automatically & intelligently
                                     # launch specs when files are modified. 
-  gem 'database_cleaner'
   gem 'dotenv-rails'
   gem 'annotate'
 
@@ -56,8 +55,10 @@ group :development, :test do
 end
 
 group :test do 
-  gem 'shoulda-matchers', require: false
+  gem 'shoulda-matchers'
   gem 'simplecov', require: false
+  gem 'database_cleaner'
+
 end
 
 group :development do
