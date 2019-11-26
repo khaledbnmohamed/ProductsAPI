@@ -11,6 +11,6 @@
 #
 
 class Product < ApplicationRecord
-  has_one_attached :image_url
+  # has_one_attached :image_url
 
 end

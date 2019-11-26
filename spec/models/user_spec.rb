@@ -23,14 +23,14 @@ RSpec.describe User, type: :model do
   context 'validation tests' do
     let(:user) { FactoryBot.create(:user) }
 
-    it 'ensure first name presence' do
-      user.save
-      expect(user).to eq(true)
+    it 'ensure basic info presence' do
+      expect(user.save).to eq(true)
     end
 
-    it 'ensure email presence' do
-      user = User.new(name: 'Lola', email: 'khaled@hotmail.com').save
-      expect(user).to eq(true)
+    it 'ensure admin false by default' do
+      user = User.new(email: 'khaled@hotmail.com', password: '123456789')
+      user.save
+      expect(user.admin).to eq(false)
     end
 
   end

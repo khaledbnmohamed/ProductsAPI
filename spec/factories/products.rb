@@ -12,6 +12,8 @@
 
 FactoryBot.define do
   factory :product do
-    
+        price {rand(1..545_645_46)}
+        title {Faker::Dessert.variety}
+        image_url {File.open(Rails.root.join('app', 'qmr.jpeg'))}
   end
 end
